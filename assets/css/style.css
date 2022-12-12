@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --darkblue: rgb(23, 23, 78);
     --yellow: rgba(231, 231, 14, 0.973);
@@ -21,6 +25,21 @@ header {
     align-items:center;
     justify-content: space-between;
     background-color: var(--yellow);
+    border-style:outset;
+    border-color: var(--darkblue);
+    border-radius: 20px;
+    border-width: 10px;
+}
+
+header h1 {
+    text-indent: 50px;
+    font-style: arial;
+    font-size: 50px;
+    background-color: var(--darkblue);
+    border-right:20px;
+    padding: 10px 50px 10px 100px;
+    
+    
 }
 
 nav {
@@ -44,15 +63,6 @@ nav a:hover {
     color:var(--darkblue);
 }
 
-header h1 {
-    text-indent: 50px;
-    font-style: arial;
-    font-size: 50px;
-    background-color: var(--darkblue);
-    padding: 10px 50px 10px 100px;
-    
-}
-
 .hero-banner {
     color: var(--yellow);
     display: flex;
@@ -71,7 +81,11 @@ header h1 {
     color:var(--darkblue);
     display: flex;
     flex-wrap: wrap;
-    margin: 220px 10px 0px 0px;
+    margin: 220px 10px 20px 0px;
+    border-style:outset;
+    border-color: var(--darkblue);
+    border-radius: 20px;
+    border-width: 10px;
 }
 
 h2 {
@@ -83,9 +97,28 @@ h2 {
     
 }
 
-
-.About-Me {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 100px;
+.page-wrapper {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.about-section {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.about-section h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--darkblue);
+    font-size: 4vw;
+    line-height: 1.1;
+}
+
