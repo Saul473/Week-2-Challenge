@@ -4,13 +4,13 @@
 
 :root {
     --darkblue: rgb(23, 23, 78);
-    --yellow: rgba(231, 231, 14, 0.973);
+    --yellow: rgba(231, 184, 14, 0.973);
     --text: white;
 }
 
 
 body {
-    background-color: var(--darkblue);
+    background: linear-gradient(180deg, rgba(231,184,14,100%)0%, rgba(23,23,78,100%)100%);
     color: var(--text);
     font-family: sans-serif;
     margin: 0;
@@ -33,13 +33,14 @@ header {
 
 header h1 {
     text-indent: 50px;
-    font-style: arial;
+    font-family: initial;
     font-size: 50px;
     background-color: var(--darkblue);
-    border-right:20px;
     padding: 10px 50px 10px 100px;
-    
-    
+    border-right-style: solid;
+    border-radius: 0px 10px 10px 0px;
+    border-color: var(--darkblue);
+
 }
 
 nav {
@@ -52,7 +53,9 @@ nav {
 }
 
 nav a {
-    padding: 10px;
+    padding: 20px;
+    font-style: italic;
+    font-family: initial;
     margin: 0;
     font-size: 30px;
     line-height: 1;
@@ -69,10 +72,16 @@ nav a:hover {
     flex-wrap:wrap;
     justify-content:end;
     margin-right: 0px;
-    background-image: url(../images/waluigi.webp);
+    /*background-image: url(../assets/images/waluigi.webp);*/
+    background-image: url(https://wallpaperaccess.com/full/6944973.jpg);
     background-size:cover;
     background-position:center;
     min-height: 25vh;
+    margin-top:5px;
+    border-style:outset;
+    border-radius:20px;
+    border-width:5px;
+    border-color: var(--yellow);
 }
 
 .hero-banner h2 {
@@ -91,10 +100,10 @@ nav a:hover {
 h2 {
     font-style:italic;
     font-size:30px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: initial;
     display: flex;
     flex-wrap: wrap;
-    
+    padding: 10px; 
 }
 
 .page-wrapper {
@@ -103,22 +112,103 @@ h2 {
     margin-right: auto;
 }
 
-.about-section {
+.page-section {
     margin: 25px 0;
     padding: 10px 0;
     display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    align-items: stretch;
     justify-content: space-between;
 }
 
-.about-section h2 {
+.page-section h2 {
     flex: 0 0 20%;
-    text-align: right;
-    padding-right: 15px;
-    border-right: 4px solid var(--darkblue);
     font-size: 4vw;
     line-height: 1.1;
+    text-align: right;
+    justify-content: flex-end;
+    border-right: solid 10px var(--yellow);
+
 }
 
+.page-section p {
+    display: flex;
+    margin:0;
+    padding: 50px;
+    border-left: 4px solid var(--darkblue);
+}
+
+.page-section ul {
+    display: flex;
+    list-style: none;
+    gap:10em;
+    margin:50px auto;
+    font-size: 20px; 
+    align-items:flex-end;   
+}
+
+.page-section ul :hover{
+    color: var(--yellow);
+    font-size: 25px;
+    transform: scale(1);
+}
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+
+  }
+  
+  .flex-item {
+    border: 5px solid var(--yellow);
+    color: var(--text);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% - 1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    text-decoration: none;
+    background-size: 150%;
+    filter: grayscale(1);
+    transition: 0.5s ease-in-out;
+  }
+
+  .flex-item:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
+}
+
+.flex-item:hover {
+  filter: grayscale(0);
+  transition: 0.5s ease-in-out;
+}
+
+.flex-item div {
+    background-color: var(--yellow);
+    padding: 100px 10x;
+    line-height: 1.5;
+    border-style: outset;
+    border-radius: 5px;
+    border-color:var(--yellow);
+}
+
+.flex-item h3 {
+  font-size: 30px;
+  font-style: italic;
+  margin: 0px;
+  padding:15px;
+}
+
+.study-guide {
+    display:flex;
+    background-image: url(https://collegeinfogeek.com/wp-content/uploads/2018/11/Essential-Books.jpg);
+    
+}
+
+.semantic-HTML {
+    display: flex;
+    background-image: url(https://images.ctfassets.net/lzny33ho1g45/learn-html-css-p-img/12978ef50623cf76538cfe18e1011fc5/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760); 
+}
